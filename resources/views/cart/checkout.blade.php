@@ -29,7 +29,20 @@
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li class="active">Check out</li>
+                    <li>
+                    <?php  $customer_id = Session::get('id');  ?>
+                    @if ($customer_id != NULL)
+                        <li>
+                            <a href="{{ url('/chackout') }}"><i class="fa fa-logout"></i>Log out</a>
+                        </li>
+                    @else
+                        <li>
+                            <a href=""><i class="fa fa-times"></i>Log in</a>
+                        </li>
+                        @endif
+
+
+                        </li>
                 </ol>
             </div><!--/breadcrums-->
 
@@ -49,6 +62,9 @@
                     <li>
                         <a href=""><i class="fa fa-times"></i>Cancel</a>
                     </li>
+
+
+
                 </ul>
             </div><!--/checkout-options-->
 
@@ -58,74 +74,26 @@
 
             <div class="shopper-informations">
                 <div class="row">
-                    <div class="col-sm-3">
-                        <div class="shopper-info">
-                            <p>Shopper Information</p>
-                            <form>
-                                <input type="text" placeholder="Display Name">
-                                <input type="text" placeholder="User Name">
-                                <input type="password" placeholder="Password">
-                                <input type="password" placeholder="Confirm password">
-                            </form>
-                            <a class="btn btn-primary" href="">Get Quotes</a>
-                            <a class="btn btn-primary" href="">Continue</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 clearfix">
+
+                    <div class="col-sm-12 col-lg-12 clearfix">
                         <div class="bill-to">
                             <p>Bill To</p>
                             <div class="form-one">
-                                <form>
-                                    <input type="text" placeholder="Company Name">
-                                    <input type="text" placeholder="Email*">
-                                    <input type="text" placeholder="Title">
-                                    <input type="text" placeholder="First Name *">
-                                    <input type="text" placeholder="Middle Name">
-                                    <input type="text" placeholder="Last Name *">
-                                    <input type="text" placeholder="Address 1 *">
-                                    <input type="text" placeholder="Address 2">
+                                <form action="{{ url('save-shiping-detelse') }}" method="post">
+                                    @csrf
+                                    <input type="text" placeholder="Email*" name="email">
+                                    <input type="text" placeholder="First Name*" name="firstName">
+                                    <input type="text" placeholder="Last Name*" name="lastName">
+                                    <input type="text" placeholder="Addresh*" name="addresh">
+                                    <input type="text" placeholder="Mobile Number*" name="mobileNumber">
+                                    <input type="text" placeholder="City*" name="city">
+                                    <input type="submit"  class="btn btn-default " value="Done">
                                 </form>
                             </div>
-                            <div class="form-two">
-                                <form>
-                                    <input type="text" placeholder="Zip / Postal Code *">
-                                    <select>
-                                        <option>-- Country --</option>
-                                        <option>United States</option>
-                                        <option>Bangladesh</option>
-                                        <option>UK</option>
-                                        <option>India</option>
-                                        <option>Pakistan</option>
-                                        <option>Ucrane</option>
-                                        <option>Canada</option>
-                                        <option>Dubai</option>
-                                    </select>
-                                    <select>
-                                        <option>-- State / Province / Region --</option>
-                                        <option>United States</option>
-                                        <option>Bangladesh</option>
-                                        <option>UK</option>
-                                        <option>India</option>
-                                        <option>Pakistan</option>
-                                        <option>Ucrane</option>
-                                        <option>Canada</option>
-                                        <option>Dubai</option>
-                                    </select>
-                                    <input type="password" placeholder="Confirm password">
-                                    <input type="text" placeholder="Phone *">
-                                    <input type="text" placeholder="Mobile Phone">
-                                    <input type="text" placeholder="Fax">
-                                </form>
-                            </div>
+                            //id	email	firstName	lastName	addresh	mobileNumber	city	created_at	updated_at
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="order-message">
-                            <p>Shipping Order</p>
-                            <textarea name="message"  placeholder="Notes about your order, Special Notes for Delivery" rows="16"></textarea>
-                            <label><input type="checkbox"> Shipping to bill address</label>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="review-payment">

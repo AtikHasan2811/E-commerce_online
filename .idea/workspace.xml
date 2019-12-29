@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b29a7d2-d98e-4f16-887f-a1ca79bb3cb5" name="Default Changelist" comment="" />
+    <list default="true" id="7b29a7d2-d98e-4f16-887f-a1ca79bb3cb5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/Login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/payment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartChackoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartChackoutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_16_221015_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_16_221015_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cart/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cart/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/category_list_pro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/category_list_pro.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/product_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/product_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/shop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/shop.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,12 +29,29 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="blade" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -119,10 +151,13 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1UyneSBDvqa4X1rbm5RS28keAhE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog project" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -156,12 +191,28 @@
       <workItem from="1576375495300" duration="104295000" />
       <workItem from="1576648845081" duration="3840000" />
       <workItem from="1576664368842" duration="2129000" />
-      <workItem from="1577064646442" duration="71516000" />
+      <workItem from="1577064646442" duration="75002000" />
+      <workItem from="1577298805986" duration="1194000" />
+      <workItem from="1577378606097" duration="37017000" />
+      <workItem from="1577504630759" duration="45613000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -185,6 +236,11 @@
           <url>file://$PROJECT_DIR$/resources/views/cart/index.blade.php</url>
           <line>83</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/front/nav.blade.php</url>
+          <line>64</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

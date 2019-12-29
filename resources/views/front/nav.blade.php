@@ -15,6 +15,7 @@
 {{--                <a class="nav-link" href="{{ route('shop') }}">Shop</a>--}}
 {{--            </li>--}}
 
+
 {{--            <li class="nav-item dropdown">--}}
 {{--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
 {{--                    Categories--}}
@@ -84,6 +85,14 @@
             {{--            </li>--}}
 
 
+                        <li class="nav-item">
+                            <a href="{{ url('custom_login') }}" class="nav-link">
+                                <i class="fa fa-star"></i> Login
+                                <span style="color: green; font-weight: bold;"></span>
+                            </a>
+                        </li>
+
+
             <?php if(Auth::check()){ ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
@@ -104,13 +113,11 @@
             </li>
             <?php }else{ ?>
 
-
-
-            <li class="nav-item"><a class="nav-link" href="{{url('/login')}}">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{url('/login')}}"></a></li>
             <?php }?>
 
             <li class="nav-item" style="list-style-type: none;">
-                <a href="{{url('/cart')}}" class="nav-link">&nbsp;Cart&nbsp;({{Cart::count()}} items)&nbsp;({{Cart::total()}} $)</a>
+                <a href="{{ url('show-card/') }}" class="nav-link">&nbsp;Cart&nbsp;({{Cart::count()}} items)&nbsp;({{Cart::total()}} $)</a>
             </li>
 
 

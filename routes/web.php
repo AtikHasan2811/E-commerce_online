@@ -38,6 +38,7 @@ Route::post('update/','CardController@update');
 
 
 
+
 //.......................................admim group.......................................
 Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
 
@@ -47,7 +48,21 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
 
 Route::resource('/produt','ProdutController');
 Route::resource('/category','CategoryController');
-Route::get('/checkout','CartChackoutController@checkout');
+
 
 });
 //.................................end admin group.........................................
+
+
+//check out route here....................
+Route::get('/custom_login','CartChackoutController@custom_login');
+Route::post('/customer_registration','CartChackoutController@customer_registration');
+Route::get('/checkout','CartChackoutController@checkout');
+Route::post('/save-shiping-detelse','CartChackoutController@shepingDetelse');
+Route::post('/customer_login','CartChackoutController@customer_login');
+Route::get('/chackout','CartChackoutController@chackout');
+Route::get('/payment','CartChackoutController@payment');
+Route::post('/order-place','CartChackoutController@order_place');
+
+
+

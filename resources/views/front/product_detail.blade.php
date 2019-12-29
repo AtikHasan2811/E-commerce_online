@@ -26,9 +26,7 @@
                     <h2 class="text-danger">$ {{$product->spl_price}}</h2>
                     <p><b>Available : {{$product->stock}} In Stock</b></p>
 
-                    <button class="btn btn-default btn-sm btn-danger">
-                        Add To Cart
-                    </button>
+                    <a href="{{ url('cart',$product->id) }}" class="btn btn-sm btn-outline-secondary">Add To Card  <i class="fa fa-shopping-card"></i></a>
                     <br>
                     <br>
                     <button class="btn btn-default btn-sm btn-danger">

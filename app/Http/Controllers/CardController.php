@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class CardController extends Controller
 {
+
     public function index($id){
   $product_info = products::find($id);
         $data= [''];

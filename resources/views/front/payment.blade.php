@@ -1,4 +1,5 @@
 
+
 @extends('front.master')
 
 
@@ -40,8 +41,8 @@
 
                 <?php
                 $catinfo= Cart::content();
-//                echo "<pre>";
-//                print_r($catinfo);
+                //                echo "<pre>";
+                //                print_r($catinfo);
 
 
                 ?>
@@ -62,48 +63,48 @@
 
 
                     @foreach($catinfo as $v_contents)
-                    <tr>
+                        <tr>
 
-                        <td class="cart_product">
-                            <a href=""><img src="{{ URL::to('storage/productImage/'.$v_contents->options->image)}} " height="80px" width="100px" alt="no image found"></a>
-{{--                            <img class="card-img-top" src="{{ asset('storage/productImage/'.$product->image) }}" alt="Card image cap">--}}
-                        </td>
-
-
-                        <td class="cart_description">
-                            <h4><a href="">{{ $v_contents->name }}</a></h4>
-
-                        </td>
+                            <td class="cart_product">
+                                <a href=""><img src="{{ URL::to('storage/productImage/'.$v_contents->options->image)}} " height="80px" width="100px" alt="no image found"></a>
+                                {{--                            <img class="card-img-top" src="{{ asset('storage/productImage/'.$product->image) }}" alt="Card image cap">--}}
+                            </td>
 
 
-                        <td class="cart_price">
-                            <h4><a href="">{{ $v_contents->price }}</a></h4>
-                        </td>
+                            <td class="cart_description">
+                                <h4><a href="">{{ $v_contents->name }}</a></h4>
+
+                            </td>
 
 
-                        <td class="cart_quantity">
-                            <div class="cart_quantity_button">
-                                <form action="{{ url('update') }}" method="post">
-                                    @csrf
-                                    <input class="cart_quantity_input" type="text" name="qty" value="{{ $v_contents->qty }}" autocomplete="off" size="2">
-                                    <input class="cart_quantity_input btn btn-info" type="hidden" name="rowId" value="{{ $v_contents->rowId }}" autocomplete="off" size="2" >
-                                    <input  type="submit" name="submit" value="update" class="btn btn-sm btn-default" size="2">
-                                </form>
+                            <td class="cart_price">
+                                <h4><a href="">{{ $v_contents->price }}</a></h4>
+                            </td>
 
 
-                            </div>
-                        </td>
+                            <td class="cart_quantity">
+                                <div class="cart_quantity_button">
+                                    <form action="{{ url('update') }}" method="post">
+                                        @csrf
+                                        <input class="cart_quantity_input" type="text" name="qty" value="{{ $v_contents->qty }}" autocomplete="off" size="2">
+                                        <input class="cart_quantity_input btn btn-info" type="hidden" name="rowId" value="{{ $v_contents->rowId }}" autocomplete="off" size="2" >
+                                        <input  type="submit" name="submit" value="update" class="btn btn-sm btn-default" size="2">
+                                    </form>
 
 
-                        <td class="cart_total">
-                            <h4><a href="">{{ $v_contents->total }}</a></h4>
-                        </td>
+                                </div>
+                            </td>
 
 
-                        <td class="cart_delete">
-                            <a class="cart_quantity_delete" href="{{ URL::to('delete/'.$v_contents->rowId) }}"><i class="fa fa-times"></i></a>
-                        </td>
-                    </tr>
+                            <td class="cart_total">
+                                <h4><a href="">{{ $v_contents->total }}</a></h4>
+                            </td>
+
+
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href="{{ URL::to('delete/'.$v_contents->rowId) }}"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
                     @endforeach
 
                     </tbody>
@@ -135,6 +136,46 @@
         </div>
     </section><!--/#do_action-->
 
+    <section id="do_action">
+        <div class="container">
+            <div class="heading">
+                <h3>What would you like to do next?</h3>
+                <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+            </div>
+            <div class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Payment method</li>
+                </ol>
+            </div>
+            <div class="paymentCont col-sm-8">
+                <div class="headingWrap">
+                    <h3 class="headingTop text-center">Select Your Payment Method</h3>
+                    <p class="text-center">Created with bootsrap button and using radio button</p>
+                </div>
+
+
+                <form action="{{ url('/order-place') }}" method="post">
+                    @csrf
+                    <input type="radio" name="payment_gateway" value="handcash"> Hand Cash<br>
+                    <input type="radio" name="payment_gateway" value="Debit Card"> Paypal<br>
+                    <input type="radio" name="payment_gateway" value="bkash"> B-Kash<br>
+                    <input type="submit" name="" value="Done">
+                </form>
+
+
+
+            </div>
+        </div>
+    </section><!--/#do_action-->
+
+
+
+
+
+
+
+
 
 @endsection
 
@@ -144,3 +185,23 @@
     <script src="{{asset('/')}}cart/js/jquery.prettyPhoto.js"></script>
     <script src="{{asset('/')}}cart/js/main.js"></script>
 @endpush
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
